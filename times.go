@@ -31,22 +31,22 @@ var magnitudes = []struct {
 	divby  int64
 }{
 	{1, "now", 1},
-	{2, "1 second %s", 1},
-	{Minute, "%d seconds %s", 1},
+	{2, "1s", 1},
+	{Minute, "%ds", 1},
 	{2 * Minute, "1 minute %s", 1},
-	{Hour, "%d minutes %s", Minute},
+	{Hour, "%dm", Minute},
 	{2 * Hour, "1 hour %s", 1},
-	{Day, "%d hours %s", Hour},
+	{Day, "%dh", Hour},
 	{2 * Day, "1 day %s", 1},
-	{Week, "%d days %s", Day},
+	{Week, "%dh", Day},
 	{2 * Week, "1 week %s", 1},
-	{Month, "%d weeks %s", Week},
-	{2 * Month, "1 month %s", 1},
+	{Month, "%dw", Week},
+	{2 * Month, "1m", 1},
 	{Year, "%d months %s", Month},
-	{18 * Month, "1 year %s", 1},
-	{2 * Year, "2 years %s", 1},
-	{LongTime, "%d years %s", Year},
-	{math.MaxInt64, "a long while %s", 1},
+	{18 * Month, "1y", 1},
+	{2 * Year, "2y", 1},
+	{LongTime, "%dy", Year},
+	{math.MaxInt64, "~", 1},
 }
 
 // RelTime formats a time into a relative string.
