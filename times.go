@@ -35,7 +35,7 @@ var magnitudes = []struct {
 	{Minute, "%ds", 1},
 	{2 * Minute, "1 minute %s", 1},
 	{Hour, "%dm", Minute},
-	{2 * Hour, "1 hour %s", 1},
+	{2 * Hour, "1h", 1},
 	{Day, "%dh", Hour},
 	{2 * Day, "1 day %s", 1},
 	{Week, "%dh", Day},
